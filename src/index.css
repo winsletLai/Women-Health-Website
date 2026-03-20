@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* Default: Light Mode */
+  --color-bg-dark: hsl(0 0% 90%);
+  --color-bg: hsl(0 0% 95%);
+  --color-bg-light: hsl(0 0% 100%);
+  --color-text: hsl(0 0% 5%);
+  --color-text-muted: oklch(44.6% 0.043 257.281);
+  --color-text-highlight: whitesmoke;
+  --color-highlight: oklch(58.6% 0.253 17.585);
+  --color-soft: #D7A790;
+  --color-orange: oklch(83.7% 0.128 66.29);
+
+  --shadow-s: inset 0 1px 2px #ffffff30, 0 1px 2px #00000030, 0 2px 4px #00000015;
+  --shadow-m: inset 0 1px 2px #ffffff50, 0 2px 4px #00000030, 0 4px 8px #00000015;
+  --shadow-l: inset 0 1px 2px #ffffff70, 0 4px 6px #00000030, 0 6px 10px #00000015;
+}
+
+* {
+  font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.dark {
+  --color-bg-dark: hsl(0 0% 0%);
+  --color-bg: hsl(0 0% 5%);
+  --color-bg-light: hsl(0 0% 10%);
+  --color-text: hsl(0 0% 95%);
+  --color-text-muted: hsl(0 0% 70%);
+  --color-soft: hsl(340, 57%, 30%);
+  --color-orange: oklch(55.3% 0.195 38.402);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(66.629% 0.22054 10.257);
+  border-radius: 999px;
+}
+
+.Days span {
+  width: calc(100%/7);
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+  cursor: pointer;
+
+}
+
+.current-day {
+  background-color: var(--color-orange);
+
+}
+
+.period {
+  background-color: var(--color-red-500);
+}
+
+.ovulation {
+  background-color: var(--color-emerald-500);
+}
+
+.prediction {
+  background-color: var(--color-pink-300);
+}
